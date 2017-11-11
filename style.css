@@ -1,234 +1,213 @@
 @import url('https://fonts.googleapis.com/css?family=Asap|Ubuntu');
 
-body{
-  margin: 0;
-  background-color: #1c2224;
-  color: white;
-  cursor: default;
+body {
+margin: 0;
+background-color: #1c2224;
+color: white;
+cursor: default;
 }
 
 p {
-    display: block;
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+display: block;
+-webkit-margin-before: 0px;
+-webkit-margin-after: 0px;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
 }
 
 .logo {
-  position: relative;
-  display: block;
+position: relative;
+display: block;
 }
 
-.sidebar-widget{
-  position: relative;
-  display: block;
-  margin: 2px 0px 2px 0px;
-  min-height: 10px;
-  height: auto;
-  background-color: #ffcc00;
-  width:120px;
+.sidebar-widget {
+position: relative;
+display: block;
+margin: 2px 0px 2px 0px;
+min-height: 10px;
+height: auto;
+background-color: #ffcc00;
+width:120px;
 }
 
-.time-widget{
-  text-align: center;
-  font-family: 'Asap', sans-serif;
-  color: black;
-  padding-top: 15px;
+.time-widget {
+text-align: center;
+font-family: 'Asap', sans-serif;
+color: black;
+padding-top: 15px;
 }
 
-.gitter-chat-embed-action-bar{
-	background: none;
+.gitter-chat-embed-action-bar {
+background: none;
 }
 
-.sidebar-button{
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 12pt;
-  color: black;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  cursor: pointer;
+.sidebar-button {
+text-align: center;
+font-family: 'Ubuntu', sans-serif;
+font-size: 12pt;
+color: black;
+padding-top: 15px;
+padding-bottom: 15px;
+cursor: pointer;
 }
 
-.sidebar-footer{
-  text-align: left;
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 8pt;
-  color: black; 
-  height: 0px;
-  max-width: 120px;
-  overflow: none;
-  cursor: default;
+.sidebar-footer {
+text-align: left;
+position: relative;
+font-family: 'Ubuntu', sans-serif;
+font-size: 8pt;
+color: black; 
+height: 0px;
+max-width: 120px;
+overflow: none;
+cursor: default;
 }
 
-.sidebar-footer p{
-	
-  padding-top: 15px;
-  padding-left: 5px;
-  padding-right: 5px; 
-	
+.sidebar-footer p {
+padding-top: 15px;
+padding-left: 5px;
+padding-right: 5px; 
 }
 
-.sidebar{
-  position: relative;
-  margin-left: 0px;
-  height: auto;
-  width:120px;
+.sidebar {
+position: relative;
+margin-left: 0px;
+height: auto;
+width:120px;
 }
 
-.window-bar{
-	text-align: center;
-    font-family: 'Ubuntu', sans-serif;	
-	position: absolute;
-	height: 15px;
-	width: 100%;
-	color: black;
+.window-bar {
+text-align: center;
+font-family: 'Ubuntu', sans-serif;	
+position: absolute;
+height: 15px;
+width: 100%;
+color: black;
 }
 
-.window-element{
-  position: absolute;
-  top:50px;
-  left: 50px;
-  z-index: 10;
-  min-height: 100px;
-  min-width: 100px;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  border-right-style: solid;
-  border-width: medium;
-  background-color: ghostwhite;
-  cursor: default;
+.window-element {
+position: absolute;
+top:50px;
+left: 50px;
+z-index: 10;
+min-height: 100px;
+min-width: 100px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-right-style: solid;
+border-width: medium;
+background-color: ghostwhite;
+cursor: default;
 }
 
-#archive-window{
-  height: 375px;
-  width: 640px;
+#archive-window {
+height: 375px;
+width: 640px;
 }
 
-#live-window{
-  height: 375px;
-  width: 640px;
+#live-window {
+height: 375px;
+width: 640px;
 }
 
-.window-viewport{
-	position: absolute;
-	top: 15px;
-	left: 0px;
-	height: auto;
-	width: auto;
+.window-viewport {
+position: absolute;
+top: 15px;
+left: 0px;
+height: auto;
+width: auto;
 }
 
-.window-exit{
- position: absolute;
- top: 2px;
- right: 2px;
- width: 10px;
- height: 10px;
- border-width: medium;
-  background-color: ghostwhite;
+.window-exit {
+position: absolute;
+top: 2px;
+right: 2px;
+width: 10px;
+height: 10px;
+border-width: medium;
+background-color: ghostwhite;
 }
 
-#on-air{
-	
-	display: inline-flex;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	margin-left: 10px;
-	
+#on-air {
+display: inline-flex;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+margin-left: 10px;
 }
 
-.notlive{
-
-	background-color: black;
-	
-
+.notlive {
+background-color: black;
 }
 
 .live {
-
-	background-color: red;
-	
+background-color: red;
 }
 
 .fileicons {
-	
-	width: 30px;
-	height: 30px;
-	
+width: 30px;
+height: 30px;
 }
 
-#filedrop-window{
-	
-  height: 300px;
-  width: 300px;
-  overflow: none;
+#filedrop-window {
+height: 300px;
+width: 300px;
+overflow: none;
+}
+
+.icon-group {
+margin: 20px;
+display: inline-block;
+width: 100px;
+text-align: center;
+}
+
+.directory-view {
+text-align: left;
+height: auto;
+max-width: 300px;
+width: 300px;
+height: 285px;
+background-color: #ffcc00;
+overflow-y: scroll;
+}
+
+#todo-window {
+height: 200px;
+width: 300px;
+overflow: none;
+}
+
+.todo-view {
+text-align: left;
+height: auto;
+max-width: 300px;
+width: 300px;
+height: 185px;
+background-color: black;
+color: #ffcc00;
+overflow-y: scroll;
+}
+
+#mine-window {
+height: 180px;
+width: 256px;
+overflow: none;
+}
+
+a:link {
+text-decoration:  none;
+} 
   
-}
-
-.icon-group{
-	
-	margin: 20px;
-	display: inline-block;
-	width: 100px;
-	text-align: center;
-	
-}
-
-.directory-view{
-	
-	text-align: left;
-	height: auto;
-	max-width: 300px;
-	width: 300px;
-	height: 285px;
-	background-color: #ffcc00;
-	overflow-y: scroll;
-	
-}
-
-#todo-window{
-	
-  height: 200px;
-  width: 300px;
-  overflow: none;
-  
-}
-
-.todo-view{
-	
-	text-align: left;
-	height: auto;
-	max-width: 300px;
-	width: 300px;
-	height: 185px;
-	background-color: black;
-	color: #ffcc00;
-	overflow-y: scroll;
-	
-}
-
-#mine-window{
-	
-	height: 180px;
-	width: 256px;
-	overflow: none;
-	
-}
-
-
-a:link    {
-  text-decoration:  none;
-  } 
 a:visited {
-  text-decoration:  none;
-  } 
-a:hover   {
-  text-decoration:  none;
-  } 
-a:active  {
-  text-decoration:  none;
-  } 
+text-decoration:  none;
+} 
+  
+a:hover {
+text-decoration:  none;
+} 
+  
+a:active {
+text-decoration:  none;
+} 

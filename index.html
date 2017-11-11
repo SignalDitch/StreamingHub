@@ -1,133 +1,117 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <meta property="og:url" content="signalditch.com" />
-  <meta property="og:description" content="Web Portal for the Signal Ditch lab" />
-  <meta property="og:image" content="http://www.signalditch.com/img/sigditchico.png" />
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link id="favicon" rel="shortcut icon" href="favicon.ico" />
-  <script type="text/javascript" src="libs/moment.min.js"></script>
-  <script type="text/javascript" src="libs/moment-timezone.min.js"></script>
-  <script type="text/javascript" src="libs/interact.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!--I DO NOT MINE WITHOUT YOUR CONSENT-->
-  <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
-  <!--I DO NOT MINE WITHOUT YOUR CONSENT-->
-  <meta charset="utf-8">
-  <title>Signal Ditch</title>
-  <meta name="description" content="Signal Ditch">
-
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <!-- OpenGraph Tags -->
+    <meta property="og:url" content="signalditch.com" />
+    <meta property="og:description" content="Web Portal for the Signal Ditch lab" />
+    <meta property="og:image" content="http://www.signalditch.com/img/sigditchico.png" />
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link id="favicon" rel="shortcut icon" href="favicon.ico" />
+    <!-- Javascript Libraries -->
+    <script type="text/javascript" src="libs/moment.min.js"></script>
+    <script type="text/javascript" src="libs/moment-timezone.min.js"></script>
+    <script type="text/javascript" src="libs/interact.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- I DO NOT MINE WITHOUT YOUR CONSENT -->
+    <script src="https://authedmine.com/lib/simple-ui.min.js" async=""></script>
+    <!-- I DO NOT MINE WITHOUT YOUR CONSENT -->
+    <!-- Basic Web Stuff -->
+    <meta charset="utf-8" />
+    <title>Signal Ditch</title>
+    <meta name="description" content="Signal Ditch" />
   </head>
-
-<body>
-
-<!-- sidebar -->
-
-<img src="http://signalditch.com/img/sigditchico.png" class="logo" width="120">
-<div class="sidebar">
-<div class="sidebar-widget time-widget">
-Current Time
-<p style="font-size: 8pt;">Boulder, Co</p>
-<p style="margin-top:5px; padding-bottom:15px;" id="mountainTime"></p>
-</div>
-<div class="sidebar-widget sidebar-button" id="live-button"	title="Not currently streaming">Live<span id="on-air" class="notlive"></span></div>
-<div class="sidebar-widget sidebar-button" id="archive-button">Archive</div>
-<a target="_blank" href="https://github.com/SignalDitch"><div class="sidebar-widget sidebar-button" id="projects-button">Projects</div></a>
-<div class="sidebar-widget sidebar-button" id="todo-button">To Do</div>
-<div class="sidebar-widget sidebar-button" id="filedrop-button">Downloads</div>
-<div class="sidebar-widget sidebar-button" id="mine-button">Donate Cycles</div>
-<a target="_blank" href="https://www.patreon.com/signalditch"><div class="sidebar-widget" id="donate-button" style="text-align: center;"><img src="img/patreon.png" width="100px" style="position: relative; top: 2px;"></div></a>
-<div class="sidebar-widget sidebar-footer" id="sidebar-footer"><p>Signal Ditch is the workshop of Nick Poole. If the "Live" indicator is red, click it to join our livestream! The chat bar to your right is our official live persistent chat hosted by Gitter. Consider helping us out by becoming a patron or donating your CPU cycles to mine Monero while you watch. Thanks!</p></div>
-</div>
-
-<!-- windowed elements -->
-
-<div class="window-element" id="archive-window">
-<div class="window-bar"><p style="position: relative; bottom: 3px;">Archive Playlist</p>
-<img class="window-exit" src="img/X.png">
-<div class="window-viewport">
-
-<iframe id="ytplayer" type="text/html" width="640" height="360"
-src="https://www.youtube.com/embed/?listType=user_uploads&list=FringeneeringLabs&modestbranding=1&color=white"
-frameborder="0"></iframe>
-
-</div>
-</div>
-</div>
-
-<!-- -->
-
-<div class="window-element" id="live-window">
-<div class="window-bar"><p style="position: relative; bottom: 3px;">SignalDitch Livestream</p>
-<img class="window-exit" src="img/X.png">
-<div class="window-viewport">
-
-<div id="ytliveplayer"></div>
-
-</div>
-</div>
-</div>
-
-<!-- -->
-
-<div class="window-element" id="filedrop-window">
-<div class="window-bar"><p style="position: relative; bottom: 3px;">Downloads</p>
-<img class="window-exit" src="img/X.png">
-<div class="window-viewport">
-<div class="directory-view">
-
-</div>
-</div>
-</div>
-</div>
-
-<!-- -->
-
-<div class="window-element" id="todo-window">
-<div class="window-bar"><p style="position: relative; bottom: 3px;">To Do</p>
-<img class="window-exit" src="img/X.png">
-<div class="window-viewport">
-<div class="todo-view">
-
-</div>
-</div>
-</div>
-</div>
-
-<!-- -->
-
-<div class="window-element" id="mine-window">
-<div class="window-bar"><p style="position: relative; bottom: 3px;">Donate Cycles</p>
-<img class="window-exit" src="img/X.png">
-<div class="window-viewport">
-<div class="coinhive-miner" 
-	style="width: 256px; height: 165px"
-	data-key="gs7LQVk4KXQ5ptJrx3MaelkB8esVOoqU"
-	data-autostart="true"
-	data-whitelabel="false"
-	data-background="#ffcc00"
-	data-text="#000000"
-	data-action="#000000"
-	data-threads="4"
-	data-throttle="0.1">
-	<em>Loading...</em>
-</div>
-</div>
-</div>
-</div>
-
-<!-- gitter sidecar -->
-
-<script type="text/javascript" src="script.js"></script>
-<script>
+  <body>
+  <!-- sidebar -->
+  <img src="http://signalditch.com/img/sigditchico.png" class="logo" width="120" />
+  <div class="sidebar">
+    <div class="sidebar-widget time-widget">Current Time
+    <p style="font-size: 8pt;">Boulder, Co</p>
+    <p style="margin-top:5px; padding-bottom:15px;" id="mountainTime"></p></div>
+    <div class="sidebar-widget sidebar-button" id="live-button" title="Not currently streaming">Live 
+    <span id="on-air" class="notlive"></span></div>
+    <div class="sidebar-widget sidebar-button" id="archive-button">Archive</div>
+    <a target="_blank" href="https://github.com/SignalDitch">
+      <div class="sidebar-widget sidebar-button" id="projects-button">Projects</div>
+    </a>
+    <div class="sidebar-widget sidebar-button" id="todo-button">To Do</div>
+    <div class="sidebar-widget sidebar-button" id="filedrop-button">Downloads</div>
+    <div class="sidebar-widget sidebar-button" id="mine-button">Donate Cycles</div>
+    <a target="_blank" href="https://www.patreon.com/signalditch">
+      <div class="sidebar-widget" id="donate-button" style="text-align: center;">
+        <img src="img/patreon.png" width="100px" style="position: relative; top: 2px;" />
+      </div>
+    </a>
+    <div class="sidebar-widget sidebar-footer" id="sidebar-footer">
+      <p>Signal Ditch is the workshop of Nick Poole. If the &quot;Live&quot; indicator is red, click it to join our livestream! The
+      chat bar to your right is our official live persistent chat hosted by Gitter. Consider helping us out by becoming a patron or
+      donating your CPU cycles to mine Monero while you watch. Thanks!</p>
+    </div>
+  </div>
+  <!-- windowed element: live -->
+  <div class="window-element" id="live-window">
+    <div class="window-bar">
+      <p style="position: relative; bottom: 3px;">SignalDitch Livestream</p>
+      <img class="window-exit" src="img/X.png" />
+      <div class="window-viewport">
+        <div id="ytliveplayer"></div>
+      </div>
+    </div>
+  </div>
+  <!-- windowed element: archive -->
+  <div class="window-element" id="archive-window">
+    <div class="window-bar">
+      <p style="position: relative; bottom: 3px;">Archive Playlist</p>
+      <img class="window-exit" src="img/X.png" />
+      <div class="window-viewport">
+        <iframe id="ytplayer" type="text/html" width="640" height="360"
+        src="https://www.youtube.com/embed/?listType=user_uploads&amp;list=FringeneeringLabs&amp;modestbranding=1&amp;color=white"
+        frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- windowed element: downloads -->
+  <div class="window-element" id="filedrop-window">
+    <div class="window-bar">
+      <p style="position: relative; bottom: 3px;">Downloads</p>
+      <img class="window-exit" src="img/X.png" />
+      <div class="window-viewport">
+        <div class="directory-view"></div>
+      </div>
+    </div>
+  </div>
+  <!-- windowed element: todo -->
+  <div class="window-element" id="todo-window">
+    <div class="window-bar">
+      <p style="position: relative; bottom: 3px;">To Do</p>
+      <img class="window-exit" src="img/X.png" />
+      <div class="window-viewport">
+        <div class="todo-view"></div>
+      </div>
+    </div>
+  </div>
+  <!-- windowed element: donate cycles-->
+  <div class="window-element" id="mine-window">
+    <div class="window-bar">
+      <p style="position: relative; bottom: 3px;">Donate Cycles</p>
+      <img class="window-exit" src="img/X.png" />
+      <div class="window-viewport">
+        <div class="coinhive-miner" style="width: 256px; height: 165px" data-key="gs7LQVk4KXQ5ptJrx3MaelkB8esVOoqU"
+        data-autostart="true" data-whitelabel="false" data-background="#ffcc00" data-text="#000000" data-action="#000000"
+        data-threads="4" data-throttle="0.1">
+          <em>Loading...</em>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- gitter sidecar -->
+  <script type="text/javascript" src="script.js"></script> 
+  <script>
   ((window.gitter = {}).chat = {}).options = {
-    room: 'SignalDitch/Lobby'
+    room: &amp;amp;#39;SignalDitch/Lobby&amp;amp;#39;
   };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer onload="openSidecar();"></script>
-
-</body>
-
+</script> 
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer="defer" onload="openSidecar();"></script></body>
 </html>

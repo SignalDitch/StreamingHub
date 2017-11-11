@@ -11,5 +11,5 @@
 	
 	If you've downloaded this file, you've successfully used the
 	file drop window! This window reflects the contents of the 
-	signalditch.com/filedrop directory and I'll use it during live
-	streams to make large files available to the audience.
+	signalditch.com/php/filedrop directory and I'll use it during 
+	livestreams to make large files available to the audience.
