@@ -13,6 +13,20 @@ function openSidecar(){
 document.getElementsByClassName('gitter-open-chat-button')[0].click();
 }
 
+console.log("   _____ _                   _ _____  _ _       _     ");
+console.log("  / ____(_)                 | |  __ \\(_) |     | |    ");
+console.log(" | (___  _  __ _ _ __   __ _| | |  | |_| |_ ___| |__  ");
+console.log("  \\___ \\| |/ _` | '_ \\ / _` | | |  | | | __/ __| '_ \\ ");
+console.log("  ____) | | (_| | | | | (_| | | |__| | | || (__| | | |");
+console.log(" |_____/|_|\\__, |_| |_|\\__,_|_|_____/|_|\\__\\___|_| |_|");
+console.log("            __/ |                                     ");
+console.log("           |___/                                      ");
+console.log("------------------------------------------------------");
+console.log("Welcome to the site, please poke at the source! If you");
+console.log("want to suggest a change, you can file a pull request ");
+console.log("over at the Signal Ditch GitHub. Click the Projects");
+console.log("button in the sidebar to jump there.");
+
 moment.tz.add('America/Denver|MST MDT MWT MPT|70 60 60 60|01010101023010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-261r0 1nX0 11B0 1nX0 11B0 1qL0 WN0 mn0 Ord0 8x20 ix0 LCN0 1fz0 1a10 1fz0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1fz0 1cN0 1cL0 1cN0 1cL0 s10 1Vz0 LB0 1BX0 1cN0 1fz0 1a10 1fz0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1fz0 1a10 1fz0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0|26e5');
 
 setInterval(function(){
@@ -42,7 +56,7 @@ $('.sidebar-footer').css('height', sidebarFill);
  $('#todo-button').click(function(e) { 
   	$('#todo-window').toggle();
 	$.ajax({ 
-	  url: 'todo_gen.php',
+	  url: 'php/todo_gen.php',
 	  success: function(data) {
 		$( "#todo-window" ).find( ".todo-view" ).html("	");
 		var todo = data;
@@ -69,7 +83,7 @@ $('.sidebar-footer').css('height', sidebarFill);
  $('#filedrop-button').click(function(e) { 
   	$('#filedrop-window').toggle();
 	$.ajax({ 
-	  url: 'filelist.php',
+	  url: 'php/filelist.php',
 	  success: function(data) {
 		$( "#filedrop-window" ).find( ".directory-view" ).html("	");
 		var ls = JSON.parse(data);
@@ -78,7 +92,7 @@ $('.sidebar-footer').css('height', sidebarFill);
 				var fileicon = document.createElement("div"); 
 				$(fileicon).addClass("icon-group");
 				var filesrc = "/filedrop/" + e;
-				fileicon.innerHTML = "<a  target=\"_blank\" href=\"" + filesrc + "\"><img src=\"file-icon.png\" class=\"fileicons\"><br><p style=\"font-size: 10pt;\">" + e + "</p></a>";
+				fileicon.innerHTML = "<a  target=\"_blank\" href=\"" + filesrc + "\"><img src=\"img/file-icon.png\" class=\"fileicons\"><br><p style=\"font-size: 10pt;\">" + e + "</p></a>";
 				$( "#filedrop-window" ).find( ".directory-view" ).append( fileicon );
 			};
 		});
